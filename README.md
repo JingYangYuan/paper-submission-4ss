@@ -24,7 +24,7 @@
 
 把接近完成的 Markdown 成稿转成投稿包：Word 导出、格式对照、正文引用与文后参考文献整理、投稿清单、cover letter 与 response letter。
 
-不负责大规模重写正文；论证或语言问题写入检查报告并回流 write。Word 导出依赖 pandoc。
+不负责大规模重写正文。论证或证据问题回流 [`paper-check-4ss`](https://github.com/JingYangYuan/paper-check-4ss) 清单指向的模块；语言扫描残留回流 write。Word 导出依赖 pandoc。默认读取最新 `paper-check-report-*`；总体结论为「不建议当前投稿」或「大修后复审」时不导出 Word，除非用户显式覆盖。
 
 ## 安装
 
@@ -42,7 +42,7 @@ git clone https://github.com/JingYangYuan/paper-submission-4ss.git
 
 - 包内相对路径相对本包根目录解析
 - `master/` 与部分 `references/` 是导出时的协议快照
-- 更新方式：修改总控对应模块后重新导出，不要直接改本仓库
+- 更新方式：修改总控任一模块、家族表、路由或协议后，必须无参数重新导出**全部**独立包并 push 全部 GitHub 仓；不要只改本仓库，也不要只导出改过的那一个。
 
 ## License
 
