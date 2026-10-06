@@ -1,11 +1,13 @@
 ---
 name: paper-submission-4ss
 description: 中文社会科学论文投稿文件整备模块。用于将 Markdown 成稿导出为 Word，按用户模板或内置社会学研究范式模板检查格式，整理正文引用与文后参考文献，生成投稿清单、cover letter 与 response letter。
-argument-hint: "[manuscript.md] [可选: --style sociological-research] [可选: --reference-doc template.docx]"
-user-invocable: true
+args_hint: "[manuscript.md] [可选: --style sociological-research] [可选: --reference-doc template.docx]"
+invocable: true
 ---
 
 > **拆分版路径约定**：本包由 `paper-master-4ss/scripts/export_standalone.py` 从 `paper-master-4ss/modules/submission/` 自动导出，是可独立安装的运行版。包内相对路径（`agents/`、`phases/`、`references/`、`master/` 等）相对本包根目录解析；跨模块路径 `paper-master-4ss/modules/<x>/...` 相对同级安装的 `paper-master-4ss/` 总控包解析。请勿直接编辑本包：修改总控模块后重新导出。
+>
+> **宿主无关约定**：本包不预设宿主，也不在 frontmatter 声明 `tools`/`hooks`/`model` 等宿主专属键。启动时按 `references/runtime-adapter.md` §5 探测当前环境可用能力，再按通用能力名（`read_file`、`search_text`、`web_search`、`run_shell`、`spawn_agent` 等）执行；宿主样例见 `references/agent-software-adapters.md`（样例，非名单）。
 
 # Paper Submission 4SS
 
